@@ -5,9 +5,28 @@
     <artifactId>TomcatWebApp</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>SimpleTomcatWebApp Maven Webapp</name>
+    <name>TomcatWebApp</name>
     <url>http://maven.apache.org</url>
+
+    <properties>
+        <javax.servlet.api.version>2.5</javax.servlet.api.version>
+        <tomcat.plugin.version>2.2</tomcat.plugin.version>
+        <postgres.connector.version>9.1-901.jdbc3</postgres.connector.version>
+    </properties>
+
+
     <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>${javax.servlet.api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgres.connector.version}</version>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -15,7 +34,9 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <build>
         <finalName>TomcatWebApp</finalName>
     </build>
+
 </project>

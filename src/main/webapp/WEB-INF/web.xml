@@ -4,4 +4,17 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>DatabaseDemo</servlet-name>
+    <servlet-class>com.sergion.tomcat_web_app.DatabaseServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DatabaseDemo</servlet-name>
+    <url-pattern>/DatabaseDemo</url-pattern>
+  </servlet-mapping>
+
 </web-app>
+
+
