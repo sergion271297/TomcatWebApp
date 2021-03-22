@@ -34,7 +34,7 @@ public class DatabaseServlet extends HttpServlet {
             ResultSet resultSet = statement.executeQuery(GET_ALL_RECORDS);
 
             writer.println(docType + "<html><head><title>" + title + "</title></head><body>");
-            writer.println("<h1>NAMES DATA</h1>");
+            writer.println("<h2>NAMES DATA</h2>");
             writer.println("<br/>");
             while (resultSet.next()) {
                 int id = resultSet.getInt(1);
@@ -42,7 +42,7 @@ public class DatabaseServlet extends HttpServlet {
                 String lastName = resultSet.getString(3);
 
                 writer.println("ID: " + id);
-                writer.println("First name: " + firstName + "<br/>");
+                writer.println("First name: " + firstName);
                 writer.println("Last name: " + lastName + "<br/>");
             }
 
